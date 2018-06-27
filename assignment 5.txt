@@ -1,0 +1,81 @@
+#q1. leap year or not
+y=int(input("Enter a year"))
+if(y%4==0):
+      print("It's a leap year")
+else:
+      print("It's not a leap year")
+
+
+
+#q2 check the dimensions
+a=int(input("Enter first dimension: "))
+b=int(input("Enter second dimension: "))
+if(a==b):
+  print("It is a square")
+else:
+  print("It is  a Rectangle")
+
+
+      
+#q2 check the dimensions
+a=int(input("Enter first dimension: "))
+b=int(input("Enter second dimension: "))
+if(a==b):
+  print("It is a square")
+else:
+  print("It is  a Rectangle")
+
+
+#q3. chechk oldest and youngest in terms of age
+a=int(input("Enter first person's  age: "))
+b=int(input("Enter second person's age: "))
+c=int(input("Enter third person's age: "))
+Oldest=""
+Youngest=""
+if(a>b and a>c):
+   Oldest="A"
+   if(b>c): 
+     Youngest="C"
+   else: 
+     Youngest="B"
+elif(b>a and b>c):
+   Oldest="B"
+   if(a>c): 
+     Youngest="C"
+   else: 
+     Youngest="A"
+else:
+   Oldest="C"
+   if(a>b): 
+     Youngest="B"
+   else: 
+     Youngest="A"
+print("%s is the oldest and %s is the youngest"%(Oldest,Youngest))
+
+
+
+#q4 which prize won
+a=int(input("enter the points won :"))
+if(a>500):
+    print("you have won gold medal")
+elif(a>=400 and a<=500):
+    print(" you have won silver medal")
+elif(a>=200 and a<=400):
+    print(" you have won bronze medal")
+else:
+    print(" Sorry no prize won")
+
+
+#q5 print after discount
+quantity=int(input("enter the quantity"))
+cost=100
+total=quantity*cost
+y=total*10//100
+discount=total-y
+if(total>1000):
+    print("after discount rupees %d"%(discount))
+else:
+    print("no discount")
+
+    
+
