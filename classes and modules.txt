@@ -1,0 +1,52 @@
+#q1. What is time tuple
+Time tuple in python represents the various time modules that provides functions to display or manipulate the time values. 
+The two standard representation of time are Epoch (which gives time in UTC a.k.a. GMT format) and the other is a tuple of 9 integers giving local time. 
+These tuples are year, month, day, hours, minutes, seconds, weekday, Julian day, DST flag.
+
+
+#q2. Program to get formatted time
+import datetime
+print(datetime.datetime.now())
+
+
+#q3.extract month from time
+import datetime
+x=datetime.datetime.now()
+print(x.strftime("%B"))
+
+#q4. extract day from time
+import datetime
+x= datetime.datetime.now()
+print(x.strftime("%A"))
+
+#q5. extract date from the time
+import datetime
+x= datetime.datetime.now()
+print(x.strftime("%d"))
+
+#q6.program to print time using localtime method
+import time
+localtime = time.localtime(time.time())
+print ("Local current time :", localtime)
+
+#q7.find factorial using math package function.
+import math
+a=int(input("factorial of"))
+print("factorial is",math.factorial(a))
+
+#q8. find gcd using math package functions
+import math
+x=int(input("Enter first number:"))
+y=int(input("Enter second number:"))
+gcd=math.gcd(x,y)
+print("GCD of %d and %d is = %d" %(x,y,gcd))
+
+#q9.use OS package
+#1. find current directory
+import os
+print(os.getcwd())
+#2. find user environment
+import os
+print(os.environ)
+
+
