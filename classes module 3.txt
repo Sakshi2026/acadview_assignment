@@ -1,0 +1,89 @@
+#q1.create a class animal
+class Animal:
+   def animal_attribute(self,name,atri):
+       print(name," has attribute to ",atri)
+
+class Tiger(Animal):
+   def show_attribute(self,name,atri):
+       self.animal_attribute(name,atri)
+
+T = Tiger()
+T.show_attribute("Tiger","roar")
+
+#q2. find the output
+class A:
+    def f(self):
+        return self.g()
+
+    def g(self):
+        return 'A'
+
+class B(A):
+    def g(self):
+        return 'B'
+
+a = A()
+b = B()
+print a.f(), b.f()
+print a.g(), b.g()
+
+'''
+output:
+A B
+A B
+'''
+
+#q3.create a class Cop.and add,display abd update the details.
+class Cop:
+  name=""
+  work=""
+  experince=1
+  designation=""
+  
+  def add(self,n,w,e,d):
+    self.name=n
+    self.work=w
+    self.experience=e
+    self.designation=d
+
+  def display(self):
+    print("Name: ",self.name) 
+    print("Work: ",self.work)
+    print("Experince(in months): ",self.experience,"months")
+    print("Designation: ",self.designation)
+ 
+
+class Update(Cop):
+  def update_details(self,u):
+      print("Update: ",u1)
+
+u1 = Update()
+u1.add("Sakshi","senior branch",48,"senior manager")
+u1.display()
+u1.update_details("details updated")
+
+#q4.create a class shape and initailize it with length and breadth.
+class Shape:
+   length=int()
+   breadth=int()
+   def area(self,l,b):
+       self.length=l
+       self.breadth=b
+       return self.length*self.breadth
+
+class Rectangle(Shape):
+   def display_area(self):
+      l=int(input("Enter length of rectangle: "))
+      b=int(input("Enter breadth of rectangle: "))
+      print("Area of Rectangle: ",self.area(l,b))
+
+r= Rectangle()
+r.display_area()
+
+class Square(Shape):
+   def display_area(self):
+      a=int(input("Enter side length of square: "))
+      print("Area of Rectangle: ",self.area(a,a))
+
+s= Square()
+s.display_area()
