@@ -1,0 +1,83 @@
+#Q1. Create a dict with name and mobile number.Define a GUI interface using tkinter and pack the label and create a scrollbar to scroll the list of keys in the dictionary.
+
+from tkinter import *
+root=Tk()
+root.title("GUI")
+root.geometry('250x240')
+
+d={'Sakshi':987654321,
+   'Sahil':9098765342,
+   'Shubhi':889076123,
+   'Ankita':7709875643}
+   
+
+frame=Frame(root)    
+frame.pack()
+
+sB=Scrollbar(frame)
+sB.pack(side=RIGHT, fill=Y)
+
+listL=Listbox(frame,yscrollcommand=sB.set)
+
+for i in d:
+   listL.insert(END,i)
+
+listL.pack(side=LEFT, fill=X)
+sB.configure(command=listL.yview)
+
+root.mainloop()
+
+#Q2. In the same tkinter file as created above, create a function to insert items into the dictionary.
+
+from tkinter import *
+root=Tk()
+root.title("GUI")
+root.geometry('250x240')
+
+d={'Sakshi':987654321,
+   'Sahil':9098765342,
+   'Shubhi':889076123,
+   'Ankita':7709875643}
+   
+
+frame=Frame(root)    
+frame.pack()
+
+sB=Scrollbar(frame)
+sB.pack(side=RIGHT, fill=Y)
+
+listL=Listbox(frame,yscrollcommand=sB.set)
+
+for i in d:
+   listL.insert(END,i)
+
+listL.pack(side=LEFT, fill=X)
+sB.configure(command=listL.yview)
+
+
+
+#adding new entries in dictionary and updating the list
+def addval():
+     d[k.get()]=v.get()
+     listL.insert(END,k.get())
+
+#creating GUI for user input
+f=Frame(root)
+f.pack()
+labelL=Label(f,text="Name ")
+labelL.grid(row=0, column=0)
+labelL=Label(f,text="Mobile No.")
+labelL.grid(row=1,column=0)
+
+k=Entry(f)
+k.grid(row=0,column=1)
+v=Entry(f)
+v.grid(row=1,column=1)
+
+#initialising button to trigger addval() function
+b=Button(f,text="Add in Dictionary",command=addval)
+b.grid(row=2,column=1)
+
+root.mainloop()
+
+
